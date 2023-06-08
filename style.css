@@ -53,7 +53,7 @@ p{
     background-size: cover;
     overflow: hidden;
     cursor: pointer;
-    /* z-index: 2; */
+    z-index: 2;
 }
 
 .color-btn:checked + label{
@@ -145,56 +145,214 @@ label.color-6{
     top: 0;
     width: 100%;
     height: 100%;
-    /* background-color: aqua; */
+    background-image: linear-gradient(196deg, #f1a9a9, #e66767);
     z-index: -1;
     display: block;
     opacity: 1;
+    transition: all 250ms linear;
+    transition-delay: 300ms;
 }
 
 .back-color.chair-2{
-    background-color: peru;
+    background-image: linear-gradient(196deg, #4c4c4c, #262626);
     opacity: 0;
 }
 .for-color-2:checked ~ .back-color.chair-2{
     opacity: 1;
 }
 .back-color.chair-3{
-    background-color: green;
+    background-image: linear-gradient(196deg, #8a9fb2, #5f7991);
     opacity: 0;
 }
 .for-color-3:checked ~ .back-color.chair-3{
     opacity: 1;
 }
 .back-color.chair-4{
-    background-color: pink;
+    background-image: linear-gradient(196deg, #97afc3, #6789a7);
     opacity: 0;
 }
 .for-color-4:checked ~ .back-color.chair-4{
     opacity: 1;
 }
 .back-color.chair-5{
-    background-color: mediumorchid;
+    background-image: linear-gradient(196deg, #afa6a0, #8c7f76);
     opacity: 0;
 }
 .for-color-5:checked ~ .back-color.chair-5{
     opacity: 1;
 }
 .back-color.chair-6{
-    background-color: purple;
+    background-image: linear-gradient(196deg, #aaadac, #838786);
     opacity: 0;
 }
 .for-color-6:checked ~ .back-color.chair-6{
     opacity: 1;
 }
 
+.info{
+    position: relative;
+    margin-left: 500px;
+    text-align: left;
+}
+.sub-title{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px ;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.title{
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+.price{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#org-price{
+    text-decoration: line-through;
+    font-size: 20px;
+    opacity: 0.6;
+    padding-left: 15px;
+}
+
+h5{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.desc-btn:checked +label, .desc-btn:not(:checked) + label{
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-right: 25px ;
+    opacity: 0.5;
+    transition: all 200ms linear;
+}
+.desc-btn:checked + label {
+    opacity: 1;
+}
+.desc-btn:not(:checked) + label:hover{
+    opacity: 0.8;
+}
+
+.desc-sec{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 250ms linear;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+.desc-sec.accor-2{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+}
+#desc-1:checked ~ .desc-sec.accor-1{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+#desc-2:checked ~ .desc-sec.accor-2{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.desc-sec.accor-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-inline{
+    display: inline-block;
+    /* margin-right: 20px; */
+}
+.container-inline p span{
+    font-size: 35px;
+    line-height: 1.1;
+}
+
+.btn{
+    margin-left: 500px;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    /* background-image: url("images/color1.jpg"); */
+    background-color: transparent;
+    background-size: cover;
+    color: #fff;
+    transition: all 250ms linear;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #944852;
+    box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+}
+
+.for-color-2:checked ~ .btn{
+    background-color: #1a1a1a;
+}
+.for-color-3:checked ~ .btn{
+    background-color: #40566e;
+}
+.for-color-4:checked ~ .btn{
+    background-color: #5e89b2;
+}
+.for-color-5:checked ~ .btn{
+    background-color: #8c7f76;
+}
+.for-color-6:checked ~ .btn{
+    background-color: #5d6160;
+}
+
+.btn:hover{
+    box-shadow: none;
+    transform: scale(0.95);
+    background-color: #333;
+}
+
+.btn i{
+    margin-right: 5px;
+}
 
 
-
-
-
-
-
-
+@media (max-width: 550px){
+    .container{
+        align-items: center;
+        width: 372px;
+        justify-content: center;
+    }
+    label.color-1{
+        margin-left: 0;
+    }
+    .info{
+        margin-top: 400px;
+        margin-left: 0;
+        text-align: center;
+        
+    }
+    .btn{
+        margin-left: 0;
+    }
+}
 
 
 @keyframes shake {
