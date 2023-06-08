@@ -334,10 +334,32 @@ h5{
 }
 
 
-@media (max-width: 550px){
+@media (max-width: 900px){
     .container{
-        align-items: center;
+        max-width: (100% - 40px);
+        width: 600px;
+        justify-content: center;
+    }
+    label.color-1{
+        margin-left: 16%;
+    }
+    .info{
+        margin-top: 400px;
+        margin-left: 0;
+        text-align: center;
+        
+    }
+    .btn{
+        margin-left: 50px;
+    }
+    .img-wrap{
+        transform: translateX(35%);
+    }
+}
+@media (max-width: 650px){
+    .container{
         width: 372px;
+        max-width: (100% - 40px);
         justify-content: center;
     }
     label.color-1{
